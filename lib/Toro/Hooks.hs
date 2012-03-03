@@ -8,16 +8,13 @@ import XMonad.Hooks.ManageDocks (avoidStruts)
 import XMonad.Hooks.DynamicLog
 import XMonad.Util.Cursor
 
-layoutHook = avoidStruts $
-             Tall 1 (5/100) (1/2) |||
-             Grid |||
-             Full
+layoutHook = avoidStruts (Full ||| Grid)
 
     
 logHook xmobarHandle = dynamicLogWithPP defaultPP {
                            ppOutput = hPutStrLn xmobarHandle
                          
-                         , ppOrder = \(w:_:t:e) -> w:t:e
+                         , ppOrder = \(w:_:_:e) -> w:e
                          , ppSep = "  ||  "
                          , ppTitle = xmobarColor "#eeeeec" ""
 
