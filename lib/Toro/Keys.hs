@@ -12,6 +12,7 @@ import XMonad.Prompt.Shell
 import XMonad.Util.EZConfig
 
 import qualified Toro.Prompt
+import qualified Toro.Commands
 
 map _ = mkKeymap undefined $ [
 
@@ -24,15 +25,19 @@ map _ = mkKeymap undefined $ [
 
         -- windows 
         , ("M4-n", windows focusDown)
-        , ("M4-m", windows shiftMaster)
         , ("M4-k", kill)
 
         -- workspaces
-        , ("M4-u M4-n", moveTo Next HiddenWS)
-        , ("M4-u M4-<Return>", addWorkspacePrompt Toro.Prompt.config)
-        , ("M4-u M4-k", removeEmptyWorkspace)
+        , ("M4-1", Toro.Commands.focusWorkSpaceByName "1")
+        , ("M4-2", Toro.Commands.focusWorkSpaceByName "2")
+        , ("M4-3", Toro.Commands.focusWorkSpaceByName "3")
 
-        -- screens
+        , ("M4-u 1", Toro.Commands.moveWindowToWorkspace "1")
+        , ("M4-u 2", Toro.Commands.moveWindowToWorkspace "2")
+        , ("M4-u 3", Toro.Commands.moveWindowToWorkspace "3")
+
+
+        -- SCREENS
         , ("M4-i M4-n", nextScreen)
         , ("M4-i M4-m", shiftNextScreen)
         , ("M4-i M4-b", swapNextScreen)

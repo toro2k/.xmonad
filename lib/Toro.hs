@@ -18,7 +18,7 @@ config xmobarHandle = defaultConfig {
                       , focusedBorderColor = "#cc0000"
                       , borderWidth = 3
                                       
-                      , workspaces = ["0", "1", "2"]
+                      , workspaces = ["1", "2", "3"]
                                      
                       , keys = Toro.Keys.map
                       , focusFollowsMouse = False
