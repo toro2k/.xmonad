@@ -9,7 +9,7 @@ import qualified Toro.Keys
 import qualified Toro.Hooks
 
 toroXMonad = do
-  xmobarHandle <- spawnPipe "xmobar"
+  xmobarHandle <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
   xmonad $ Toro.config xmobarHandle
 
 config xmobarHandle = defaultConfig {
