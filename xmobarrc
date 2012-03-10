@@ -1,5 +1,5 @@
 Config { 
-         font = "xft:DejaVu Sans:size=10:antialias=true"
+         font = "xft:DejaVu Sans:size=10"
 
        , fgColor = "#eeeeec"
        , bgColor = "#cc0000"
@@ -13,8 +13,10 @@ Config {
        , alignSep = "||"
 
        , commands = [
-       	   Run StdinReader
- 	 , Run Com "battery-status" [] "" 120
-         , Run Date "%d/%m/%Y @ %k:%M" "date" 60 ]
-       , template = "%StdinReader%||%battery-status% %date% "
+           Run StdinReader
+         , Run Com "net-status" [] "" 120
+         , Run Battery ["-t", "BAT: <left>%"] 120
+         , Run Date "%a %b %e %H:%M %Y" "date" 60
+         ]
+       , template = "%StdinReader%|| [ %net-status% ] [ %battery% ] [ %date% ] "
        }
