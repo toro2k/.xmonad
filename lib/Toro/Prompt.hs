@@ -3,7 +3,7 @@ module Toro.Prompt where
 import XMonad.Prompt
     
 config = defaultXPConfig {
-           font = "xft:DejaVu Sans Mono:size=10"
+           font = "-*-terminus-bold-*-*-*-16-*-*-*-*-*-*-"
 
          , bgColor = "#2e3436"
          , fgColor = "#eeeeec"

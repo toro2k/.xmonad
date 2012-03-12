@@ -1,5 +1,5 @@
 Config { 
-         font = "xft:DejaVu Sans:size=10"
+         font = "-*-terminus-bold-*-*-*-16-*-*-*-*-*-*-"
 
        , fgColor = "#eeeeec"
        , bgColor = "#cc0000"
