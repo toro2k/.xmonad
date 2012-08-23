@@ -17,7 +17,7 @@ import qualified Toro.Commands
 map _ = mkKeymap undefined $ [
 
         -- stopping and restarting xmonad        
-          ("M4-q", io exitSuccess)
+          ("M4-C-q", io exitSuccess)
         , ("M4-r", restart "xmonad" True)
 
         -- run applications
@@ -28,13 +28,13 @@ map _ = mkKeymap undefined $ [
         , ("M4-k", kill)
 
         -- workspaces
-        , ("M4-1", Toro.Commands.focusWorkSpaceByName "1")
-        , ("M4-2", Toro.Commands.focusWorkSpaceByName "2")
-        , ("M4-3", Toro.Commands.focusWorkSpaceByName "3")
+        , ("M4-1", Toro.Commands.focusWorkSpaceByName "www")
+        , ("M4-2", Toro.Commands.focusWorkSpaceByName "dev")
+        , ("M4-3", Toro.Commands.focusWorkSpaceByName "var")
 
-        , ("M4-u 1", Toro.Commands.moveWindowToWorkspace "1")
-        , ("M4-u 2", Toro.Commands.moveWindowToWorkspace "2")
-        , ("M4-u 3", Toro.Commands.moveWindowToWorkspace "3")
+        , ("M4-u 1", Toro.Commands.moveWindowToWorkspace "www")
+        , ("M4-u 2", Toro.Commands.moveWindowToWorkspace "dev")
+        , ("M4-u 3", Toro.Commands.moveWindowToWorkspace "var")
 
 
         -- SCREENS
