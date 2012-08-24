@@ -8,7 +8,7 @@ import XMonad.Hooks.ManageDocks (avoidStruts)
 import XMonad.Hooks.DynamicLog
 import XMonad.Util.Cursor
 
-layoutHook = avoidStruts (Full ||| Grid)
+layoutHook = avoidStruts (Full ||| Tall 1 (5/100) (1/2))
 
     
 logHook xmobarHandle = dynamicLogWithPP defaultPP {
