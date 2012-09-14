@@ -8,22 +8,18 @@ import XMonad.Util.Run
 import qualified Toro.Keys
 import qualified Toro.Hooks
 
-toroXMonad = do
-  xmobarHandle <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
-  xmonad $ Toro.config xmobarHandle
+toroXMonad = xmonad config
 
-config xmobarHandle = defaultConfig {
-
-                        normalBorderColor = "#555753"
-                      , focusedBorderColor = "#cc0000"
-                      , borderWidth = 3
-                                      
-                      , workspaces = ["www", "dev", "var"]
-                                     
-                      , keys = Toro.Keys.map
-                      , focusFollowsMouse = False
-                                            
-                      , layoutHook  = Toro.Hooks.layoutHook
-                      , logHook     = Toro.Hooks.logHook xmobarHandle
-                      , startupHook = Toro.Hooks.startupHook
-                      }
+config = defaultConfig {
+    normalBorderColor = "#555753"
+  , focusedBorderColor = "#cc0000"
+  , borderWidth = 3
+                  
+  , workspaces = ["www", "dev", "var"]
+                 
+  , keys = Toro.Keys.map
+  , focusFollowsMouse = False
+                        
+  , layoutHook  = Toro.Hooks.layoutHook
+  , startupHook = Toro.Hooks.startupHook
+  }
