@@ -6,6 +6,6 @@ import XMonad.Util.Cursor
 
 layoutHook = avoidStruts $
              Full |||
-             Tall 1 (2/3) (1/100)
+             Tall 1 (1/100) (2/3)
 
 startupHook = setDefaultCursor xC_left_ptr
