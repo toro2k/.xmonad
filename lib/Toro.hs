@@ -13,7 +13,7 @@ toroXMonad = xmonad config
 config = defaultConfig {
     normalBorderColor = "#555753"
   , focusedBorderColor = "#cc0000"
-  , borderWidth = 3
+  , borderWidth = 5
                   
   , workspaces = ["www", "dev", "var"]
                  
